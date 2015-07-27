@@ -138,3 +138,6 @@ noremap <Right> <NOP>
 
 "setting clipboard to unnamed so that it's copied into system clipboard
 set clipboard=unnamedplus
+"folding settings
+set foldmethod=syntax
+set foldcolumn=2

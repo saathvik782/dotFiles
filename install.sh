@@ -1,5 +1,5 @@
 #!/bin/bash
-
+DOTFILES=$HOME/.dotfiles
 echo "Installing dotfiles"
 
 echo "Initializing submodule(s)"
@@ -12,10 +12,10 @@ if [ "$(uname)" == "Linux" ]; then
 
     echo "Installing all the things"
     echo "Infecting the system"
-    source scripts/apt.sh
+    source install/apt.sh
     
     echo "Starting vim setup"
-    source scripts/vim.sh
+    source install/vim.sh
 
     echo "Updating Linux settings"
     #source scripts/osx.sh
@@ -23,7 +23,10 @@ if [ "$(uname)" == "Linux" ]; then
     echo "Installing node (from nvm)"
     nvm install stable
     nvm alias default stable
-
+    
+    echo "Adding custom commands"
+    echo "PATH=$PATH:$DOTFILES/bin" >> ~/.zshrc
+    
     echo "Configuring nginx"
     # create a backup of the original nginx.conf
     mv /usr/local/etc/nginx/nginx.conf /usr/local/etc/nginx/nginx.original
@@ -31,7 +34,6 @@ if [ "$(uname)" == "Linux" ]; then
     # symlink the code.dev from dotfiles
     ln -s nginx/code.dev /usr/local/etc/nginx/sites-enabled/code.dev
 fi
-
 
 echo "Configuring zsh as default shell"
 chsh -s $(which zsh)
