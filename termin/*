@@ -1,0 +1,64 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  title_transmit_bg_color = "#22cf25"
+  title_transmit_fg_color = "#000000"
+[keybindings]
+  go_up = <Alt>k
+  switch_to_tab_1 = <Alt>1
+  split_horiz = <Alt>bracketright
+  switch_to_tab_4 = <Alt>4
+  go_down = <Alt>j
+  switch_to_tab_5 = <Alt>5
+  switch_to_tab_2 = <Alt>2
+  go_right = <Alt>l
+  go_left = <Alt>h
+  split_vert = <Alt>bracketleft
+  switch_to_tab_3 = <Alt>3
+[profiles]
+  [[default]]
+    background_darkness = 0.9
+    background_type = transparent
+    scrollback_infinite = True
+    foreground_color = "#ffffff"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+  [[nw]]
+    [[[child0]]]
+      position = 65:24
+      type = Window
+      order = 0
+      parent = ""
+      size = 1301, 744
+    [[[child1]]]
+      labels = None, None
+      type = Notebook
+      order = 0
+      parent = child0
+    [[[child2]]]
+      position = 650
+      type = HPaned
+      order = 0
+      parent = child1
+    [[[terminal3]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child2
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child1
+    [[[terminal4]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child2
+[plugins]
