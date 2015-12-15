@@ -24,6 +24,9 @@ if [ "$(uname)" == "Linux" ]; then
     nvm install stable
     nvm alias default stable
     
+    source install/prezto.sh
+    source install/termin.sh
+
     echo "Adding custom commands"
     echo "PATH=$PATH:$DOTFILES/bin" >> ~/.zshrc
     

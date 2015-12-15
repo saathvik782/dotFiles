@@ -20,5 +20,3 @@ sudo apt-get -y install nvm
 #sudo apt-get -y install z
 #sudo apt-get -y install markdown
 
-source prezto.sh
-source termin.sh
