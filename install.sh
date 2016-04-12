@@ -31,7 +31,6 @@ if [ "$(uname)" == "Linux" ]; then
     source install/prezto.sh
     
     source install/prezto.sh
-    source install/termin.sh
 
     echo "Adding custom commands"
     #echo "PATH=$PATH:$DOTFILES/bin" >> ~/.zshrc
