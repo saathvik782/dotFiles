@@ -23,12 +23,18 @@ if [ "$(uname)" == "Linux" ]; then
     echo "Installing node (from nvm)"
     nvm install stable
     nvm alias default stable
+
+    echo "Setting things for terminator"
+    source install/termin.sh
+
+    echo "Setting things for prezto"
+    source install/prezto.sh
     
     source install/prezto.sh
     source install/termin.sh
 
     echo "Adding custom commands"
-    echo "PATH=$PATH:$DOTFILES/bin" >> ~/.zshrc
+    #echo "PATH=$PATH:$DOTFILES/bin" >> ~/.zshrc
     
     echo "Configuring nginx"
     # create a backup of the original nginx.conf
