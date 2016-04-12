@@ -29,8 +29,6 @@ if [ "$(uname)" == "Linux" ]; then
 
     echo "Setting things for prezto"
     source install/prezto.sh
-    
-    source install/prezto.sh
 
     echo "Adding custom commands"
     #echo "PATH=$PATH:$DOTFILES/bin" >> ~/.zshrc
